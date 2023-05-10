@@ -1,2 +1,2 @@
-# WordPress-EB-Project
-Elastic Beanstalk used for constructing a simple WordPress site.
+# Serverless Microservices Project
+Front end API hosted on API Gateway connected with a Lambda back-end with DynamoDB as the database layer.
