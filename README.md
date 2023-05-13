@@ -109,3 +109,5 @@ I then created a new DynamoDB table with a table name of lambda-apigateway and a
 
 ## 5. Create an API through API Gateway
 Next, I created a new REST API named DynamoDBOperations. This API acts a central interface for external users to interact with our AWS services, in this case, our DynamoDB table and Lambda function. It is sort of a "front door" for applications and users to access backend services.
+- Below is a snapshot of the created resource, DynamoDBManager:
+![API Resource.png](Microservices-Images/API_Resource_DB.png)
