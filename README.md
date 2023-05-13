@@ -98,4 +98,4 @@ I used a simple test code provided by the guide to test the functionality of the
 
 ![Test_Result..png](Microservices-Images/Test_Result.png)
 
-**Explanation**: This JSON code is a test event for the Lambda function. It specifies an operation "echo" and provides data for the function to work with. The payload contains two key-value pairs: "somekey1" with value "somevalue1", and "somekey2" with the value "somevalue2". The test succeeded
+**Explanation**: This JSON code is a test event for the Lambda function. It specifies an operation "echo" and provides data for the function to work with. The payload contains two key-value pairs: "somekey1" with value "somevalue1", and "somekey2" with the value "somevalue2". The echo test succeeded in returning the key-value pairs to me, meaning it is ready to be deployed.
