@@ -45,6 +45,42 @@ The next step in the setup process was to create the AWS Lambda function that wo
  - I authored a Python function from scratch. The AWS SDK for Python (Boto3) provides an easy-to-use, high-level interface for interacting with AWS services.
  - I attached the previously created IAM role, **lambda-apigateway-role**, to this function. This role provides the function with the necessary permissions to interact with DynamoDB for data operations and with CloudWatch for logging.
  - The function is designed to be triggered by API Gateway later on in the project. It processes incoming requests, performs the appropriate operation (Create, Read, Update, Delete) on the DynamoDB table based on the request from the User, and returns a response.
- - Below is a snapshot of the python/boto3 code used for the project:
+ - Below is the python/boto3 code used for the project:
+```python
+import boto3
+import json
+
+print('Loading function')
+
+
+def lambda_handler(event, context):
+    '''Provide an event that contains the following keys:
+
+      - operation: one of the operations in the operations dict below
+      - tableName: required for operations that interact with DynamoDB
+      - payload: a parameter to pass to the operation being performed
+    '''
+    #print("Received event: " + json.dumps(event, indent=2))
+
+    operation = event['operation']
+
+    if 'tableName' in event:
+        dynamo = boto3.resource('dynamodb').Table(event['tableName'])
+
+    operations = {
+        'create': lambda x: dynamo.put_item(**x),
+        'read': lambda x: dynamo.get_item(**x),
+        'update': lambda x: dynamo.update_item(**x),
+        'delete': lambda x: dynamo.delete_item(**x),
+        'list': lambda x: dynamo.scan(**x),
+        'echo': lambda x: x,
+        'ping': lambda x: 'pong'
+    }
+
+    if operation in operations:
+        return operations[operation](event.get('payload'))
+    else:
+        raise ValueError('Unrecognized operation "{}"'.format(operation))
+```
  
- ![Lambda Function.png](Microservices-Images/Lambda%20Function.png)
+**Explanation**: This Python Script defines a Lambda function handler that responds to different operations on a DynamoDB table.
