@@ -87,3 +87,9 @@ def lambda_handler(event, context):
  - The if 'tableName' in event code block will create a DynamoDB table resource if the event contains a tableName. This is done with the imported boto3 library, with dynamo being a boto3 resource linked to DynamoDB. Important resources from AWS can be found on the boto3 documentation website.
  - The dictionary, operations, will define each specific DynamoDB operation. Each line speaks for itself in DynamoDB action terms. Create puts a new piece of data in the table, read gets the item, and so on.
  - Lastly, the final if-else block makes sure that if the operation specified in the vent is tin the operations dictionary, it will execute the code. If the operation is not in the operations dictionary however, it will raise an error.
+
+## Test the Code
+I used a simple test code provided by the guide to test the functionality of the Lambda code before deploying it.
+- Below is a snapshot of the test code used:
+
+![Test Value.png](Microservices-Images/Test%20Value.png)
