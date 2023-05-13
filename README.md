@@ -83,7 +83,7 @@ def lambda_handler(event, context):
         raise ValueError('Unrecognized operation "{}"'.format(operation))
 ```
  
-**Explanation**: This Python Script defines a Lambda function handler that responds to different operations on a DynamoDB table. We import bot3 and json libraries to start the code off. The main function: lamda_handler, will be the function that will be triggered when the code is executed. The operation = event line will extract the DynamoDB operation to be performed from the event.
+**Explanation**: This Python Script defines a Lambda function handler that responds to different operations on a DynamoDB table. We import boto3 and json libraries to start the code off. The main function: lamda_handler, will be the function that will be triggered when the code is executed. The operation = event line will extract the DynamoDB operation to be performed from the event.
  - The if 'tableName' in event code block will create a DynamoDB table resource if the event contains a tableName. This is done with the imported boto3 library, with dynamo being a boto3 resource linked to DynamoDB. Important resources from AWS can be found on the boto3 documentation website.
  - The dictionary, operations, will define each specific DynamoDB operation. Each line speaks for itself in DynamoDB action terms. Create puts a new piece of data in the table, read gets the item, and so on.
  - Lastly, the final if-else block makes sure that if the operation specified in the vent is tin the operations dictionary, it will execute the code. If the operation is not in the operations dictionary however, it will raise an error.
