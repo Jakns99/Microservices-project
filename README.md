@@ -106,3 +106,6 @@ I then created a new DynamoDB table with a table name of lambda-apigateway and a
 ![Dynamo_Creation.png](Microservices-Images/Dynamo_creation.png)
 
 **Explanation**: This is a relatively simple process. DynamoDB provides a scalable, low-latency, and highly available NoSQL data storage. The DynamoDB table will act as a database layer for our architecture and allow us to store data from API Gateway to Lambda function calls. 
+
+## 5. Create an API through API Gateway
+Next, I created a new REST API named DynamoDBOperations. This API acts a central interface for external users to interact with our AWS services, in this case, our DynamoDB table and Lambda function. It is sort of a "front door" for applications and users to access backend services.
