@@ -88,8 +88,14 @@ def lambda_handler(event, context):
  - The dictionary, operations, will define each specific DynamoDB operation. Each line speaks for itself in DynamoDB action terms. Create puts a new piece of data in the table, read gets the item, and so on.
  - Lastly, the final if-else block makes sure that if the operation specified in the vent is tin the operations dictionary, it will execute the code. If the operation is not in the operations dictionary however, it will raise an error.
 
-## Test the Code
+## 3. Test the Code
 I used a simple test code provided by the guide to test the functionality of the Lambda code before deploying it.
 - Below is a snapshot of the test code used:
 
 ![Test Value.png](Microservices-Images/Test%20Value.png)
+
+- Here is the result of the provided test:
+
+![Test_Result..png](Microservices-Images/Test_Result.png)
+
+**Explanation**: This JSON code is a test event for the Lambda function. It specifies an operation "echo" and provides data for the function to work with. The payload contains two key-value pairs: "somekey1" with value "somevalue1", and "somekey2" with the value "somevalue2". The test succeeded
