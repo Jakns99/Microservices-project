@@ -105,4 +105,4 @@ I then created a new DynamoDB table with a table name of lambda-apigateway and a
 
 ![Dynamo_Creation.png](Microservices-Images/Dynamo_creation.png)
 
-**Explanation**: This is a relatively simple process. DynamoDB provides a scalable, low-latency, and highly available NoSQL data storage. The creation of a DynamoDB table will act as a database layer for our architecture and allow us to store data from API Gateway to Lambda function calls. 
+**Explanation**: This is a relatively simple process. DynamoDB provides a scalable, low-latency, and highly available NoSQL data storage. The DynamoDB table will act as a database layer for our architecture and allow us to store data from API Gateway to Lambda function calls. 
