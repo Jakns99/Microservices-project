@@ -108,6 +108,18 @@ I then created a new DynamoDB table with a table name of lambda-apigateway and a
 **Explanation**: This is a relatively simple process. DynamoDB provides a scalable, low-latency, and highly available NoSQL data storage. The DynamoDB table will act as a database layer for our architecture and allow us to store data from API Gateway to Lambda function calls. 
 
 ## 5. Create an API through API Gateway
-Next, I created a new REST API named DynamoDBOperations. This API acts a central interface for external users to interact with our AWS services, in this case, our DynamoDB table and Lambda function. It is sort of a "front door" for applications and users to access backend services.
+Next, I created a new REST API named DynamoDBOperations. This API acts a central interface for external users to interact with our AWS services, in this case, our DynamoDB table and Lambda function. It is essentially the a "front door" for applications and users to access data and backend services.
 - Below is a snapshot of the created resource, DynamoDBManager:
+
 ![API Resource.png](Microservices-Images/API_Resource_DB.png)
+- Then,  I created a new POST method for the DynamoDBManager resource. This is done by selecting the Actions dropdown menu, and choosing 'Create Method' while the /dynamodbmanager resource is selected. The POST method is commonly used to send data to the server to create a new record.
+- This new POST method is set up to trigger a Lambda function. In the setup shown in the screenshot below, 'Lambda Function' is selected as the integration type, and 'LambdaFunctionOverHttps' is specified as the function to be triggered. This is the name of the Lambda function we created earlier in the project.
+
+![Lambda_API_Integration_POST.png](Microservices-Images/Lambda_API_Integration_POST.png)
+- Finally, I selected Deploy API in a new Deployment stage, I named the stage Prod, for production purposes in a hypothetical work scenario. 
+- With this, the architecture is all set up to run the solution. I have the Invoke URL from my Post Method hidden for privacy purposes.
+
+**Explanation**: With this setup, when a POST request is made to the /dynamodbmanager endpoint of our API, it will trigger the 'LambdaFunctionOverHttps' function. This function is designed to execute complex business logic and interact with our DynamoDB table. This setup is highly flexible and can be adapted to handle a wide range of applications and workflows, which is why I chose to undertake this project and gain experience for Microservices and API's, which I believe are invaluable skills for cloud.
+
+
+
