@@ -126,3 +126,6 @@ This is the final step. I used a third-party website called POSTman to test out 
 - I used Postman to send a POST request to the /dynamodbmanager endpoint of my API, passing in the JSON payload below. I then checked the response to ensure that the LambdaFunctionOverHttps function was triggered correctly and that the data was successfully stored in the DynamoDB table.
 
 ![Postman_POST.png](Microservices-Images/Postman_POST.png)
+- Below is an image of the successful POST with a 200 code:
+
+![POST_Success.png](Microservices-Images/POST_Success.png)
