@@ -139,3 +139,6 @@ This is the final step. I used a third-party website called POSTman to test out 
 ![List_JSON_op_Success.png](Microservices-Images/List_JSON_op_Success.png)
 
 **Explanation and Final Thoughts**: In this project, I created a serverless architecture to handle data operations through a REST API. This architecture used a DynamoDB table for data storage, a Lambda Function for executing business logic, and an API Gateway to allow users to interact with the project. I used Postman to test the API, confirming that data could be successfully stored and retrieved from the DynamoDB table via the API. Overall, this project proved me with valuable hands-on experience with microservices, API's and how they interact within AWS overall. 
+
+## Cleanup
+This was an easy cleanup, simply selecting delete on all three of the services removes the architecture.
