@@ -121,5 +121,8 @@ Next, I created a new REST API named DynamoDBOperations. This API acts a central
 
 **Explanation**: With this setup, when a POST request is made to the /dynamodbmanager endpoint of our API, it will trigger the 'LambdaFunctionOverHttps' function. This function is designed to execute complex business logic and interact with our DynamoDB table. This setup is highly flexible and can be adapted to handle a wide range of applications and workflows, which is why I chose to undertake this project and gain experience for Microservices and API's, which I believe are invaluable skills for cloud.
 
+## 6. Run Solution
+This is the final step. I used a third-party website called POSTman to test out my new API project.  Postman allows you to send requests to an API and view the responses, making it an excellent tool for testing and debugging.
+- I used Postman to send a POST request to the /dynamodbmanager endpoint of my API, passing in the JSON payload below. I then checked the response to ensure that the LambdaFunctionOverHttps function was triggered correctly and that the data was successfully stored in the DynamoDB table.
 
-
+![Postman_POST.png](Microservices-Images/Postman_POST.png)
