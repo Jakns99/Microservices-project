@@ -133,3 +133,7 @@ This is the final step. I used a third-party website called POSTman to test out 
 - Below is an image of the DynamoDB table with the piece of data successfully collected.
 
 ![Dynamo_Success.png](Microservices-Images/Dynamo_Success.png)
+
+- Finally, I used Postman to test a 'list' operation, which is designed to retrieve all items from the DynamoDB table. This showcases that the first operation with Postman was a success.
+
+![List_JSON_op_Success.png](Microservices-Images/List_JSON_op_Success.png)
