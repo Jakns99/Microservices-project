@@ -3,7 +3,7 @@
 This project showcases a serverless microservices architecture using AWS. It employs API Gateway as the front-end interface, which communicates with a Lambda function serving as the back-end. This Lambda function performs create, read, update, and delete (CRUD) operations on DynamoDB tables. The entire setup demonstrates a practical, scalable, and cost-effective cloud solution.
 
 ## Disclaimer/Project Reference
-This project is not mine nor is it my idea. This project was completed with the instructions from https://github.com/saha-rajdeep/serverless-lab. This project was done as a learning experience and I take no credit from the source. With that being said, I added my own explanations to why each section and technology were used and how they all fit together to showcase what I've learned.
+**This project was completed with the instructions from https://github.com/saha-rajdeep/serverless-lab. This project was done as a learning experience and I take no credit from the source. With that being said, I added my own explanations to why each section and technology were used and how they all fit together to showcase what I've learned.**
 
 ## Architecture Overview
 
